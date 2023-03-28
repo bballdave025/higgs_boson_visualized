@@ -91,7 +91,7 @@ people, you might want to know that I've also included the final
 mass histogram, Monte Carlo events, analysis of Higgs in the mass
 regime, etc. in the notebook.
 
-#My-History-And-Sources
+# My-History-And-Sources
 
 The first one I'll do here is from my academic background - MS Physics at the University of California at Riverside with research at the **R**eletavistic **H**eavy **I**on **C**ollider - [RHIC](https://www.bnl.gov/rhic/) ([archived](https://web.archive.org/web/20230303001906/https://www.bnl.gov/rhic/)), specifically at a **P**ioneering **H**igh **E**nergy **N**uclear **I**nteraction e**X**periment - [PHENIX](https://www.phenix.bnl.gov/) ([archived](https://web.archive.org/web/20230305034745/https://www.phenix.bnl.gov/)). I was able to be part of the research and discussion - much more discussion than research - concerning the discovery of the Higgs Boson, which happened at [CERN](https://www.home.cern/)'s ([archived](https://web.archive.org/web/20230305014745/https://www.home.cern/)) LHC - in France and Switzerland.
 
