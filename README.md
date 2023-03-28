@@ -2,7 +2,7 @@
 
 This Jupyter notebook is now available (and executable), thanks to [MyBinder](https://mybinder.org/).
 
-[![Binder link not yet alive](https://mybinder.org/badge_logo.svg)](#)
+[![Binder link not yet alive](https://mybinder.org/badge_logo.svg)](https://hub.ovh2.mybinder.org/user/bballdave025-hi-oson_visualized-r2tutfn0/doc/tree/Higgs_Boson_Discovery_Visualization.ipynb)
 
 # Brief Description
 
