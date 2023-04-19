@@ -132,4 +132,4 @@ regime, etc. in the notebook.
 
 I can also cross-reference the [ATLAS experiment](https://github.com/atlas-outreach-data-tools/notebooks-collection-opendata) ([archived](https://web.archive.org/web/20230305041631/https://github.com/atlas-outreach-data-tools/notebooks-collection-opendata)).
 
-I'll also probably to a mass spectrum from PHENIX to relive the good ol' days. [Their github](https://github.com/PhenixCollaboration) ([archived](https://web.archive.org/web/20230305041735/https://github.com/PhenixCollaboration)) will likely be useful.
+I'll also probably to a mass spectrum from PHENIX to relive the good ol' days. [Their github](https://github.com/PhenixCollaboration) ([archived](https://web.archive.org/web/20230305041735/https://github.com/PhenixCollaboration)) will likely be useful. 
