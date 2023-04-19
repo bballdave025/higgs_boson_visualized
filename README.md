@@ -1,8 +1,12 @@
 # higgs_boson_visualized
 
-This Jupyter notebook is now available (and executable), thanks to [MyBinder](https://mybinder.org/).
+This Jupyter notebook is now available (and executable), thanks to 
+[MyBinder](https://mybinder.org/). Or at least it should be, soon. 
+I'm still figuring out the MyBinder thing. Try the link and see what
+happens. If it's nothing, look at the Jupyter Notebook in the repo.
 
-[![Binder link not yet alive](https://mybinder.org/badge_logo.svg)](https://hub.ovh2.mybinder.org/user/bballdave025-hi-oson_visualized-r2tutfn0/doc/tree/Higgs_Boson_Discovery_Visualization.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/bballdave025/higgs_boson_visualized/main?labpath=Higgs_Boson_Discovery_Visualization.ipynb)
+
 
 # Brief Description
 
@@ -16,16 +20,48 @@ can go there, first. You can think of that link a bit like a
 [`Wanna Skip Physics?`](#My-History-And-Sources) button, a bit like the ones
 in the actual notebook.
 
+We are going to see if I can do an analysis that leads to something similar to
+the discovery plot for the Higgs, which you can see right after this text.
+
+<br/>
+<div>
+  <img src="./publication_4lepton_spectrum.png"
+       alt="Publication histogram - our goal for the analysis is to be similar to this"
+       width="400px">
+</div>
+<br/>
+
 I have rather enjoyed this visualization, when I wasn't cussing it out.
 That's how things seem to go when you're working with data, especially with
 learning new tools with a new dataset using some skills you haven't much
 used for ten years (so say I 20230321T175500-0600). 
 
+
+# My-History-And-Sources
+
+The first visualization I'll do here is from my academic background - MS Physics at the University of California at Riverside with research at the **R**eletavistic **H**eavy **I**on **C**ollider - [RHIC](https://www.bnl.gov/rhic/) ([archived](https://web.archive.org/web/20230303001906/https://www.bnl.gov/rhic/)), specifically at a **P**ioneering **H**igh **E**nergy **N**uclear **I**nteraction e**X**periment - [PHENIX](https://www.phenix.bnl.gov/) ([archived](https://web.archive.org/web/20230305034745/https://www.phenix.bnl.gov/)). I was able to be part of the research and discussion - much more discussion than research - concerning the discovery of the Higgs Boson, which happened at [CERN](https://www.home.cern/)'s ([archived](https://web.archive.org/web/20230305014745/https://www.home.cern/)) LHC - in France and Switzerland.
+
+I'm following a [guide](https://opendata-education.github.io/en_Workshops/exercises/discussion.html) ([archived](https://web.archive.org/web/20230305034951/https://opendata-education.github.io/en_Workshops/exercises/discussion.html)) from the [Helsinki Institute of Physics](https://www.hip.fi/) ([archived](https://web.archive.org/web/20230305040722/https://www.hip.fi/)). The data comes from the **C**ompact **M**uon **S**olenoid - [CMS](https://home.cern/science/experiments/cms) ([archived](https://web.archive.org/web/20230305041155/https://home.cern/science/experiments/cms)) - experiment, which lives way under the ground of France on the **L**arge **H**adron **C**ollider - [https://www.hasthelargehadroncolliderdestroyedtheworldyet.com/](https://www.hasthelargehadroncolliderdestroyedtheworldyet.com/) ([archived](https://web.archive.org/web/20230216163611/https://hasthelargehadroncolliderdestroyedtheworldyet.com/)), oops, the official link is for the [LHC](https://www.home.cern/science/accelerators/large-hadron-collider) ([archived](https://web.archive.org/web/20230305041346/https://www.home.cern/science/accelerators/large-hadron-collider)), though I believe that the code from the former site is legit. Check it out.
+
+```javascript
+<script type="text/javascript">
+if (!(typeof worldHasEnded == "undefined")) {
+document.write("YUP.");
+} else {
+document.write("NOPE.");
+}
+</script>
+```
+
+Anyway, I'll use the data from CMS to visualize something analagous to discovery of the Higgs through the 4-lepton channel. Look at the pictures - they'll be cool. 
+
 # Some More Details
 
-## Roadblocks
+## Roadblocks - Things that got in my way that may or may not be interesting
 
-### Not the right number (nJxAgzeSAI0&t=877s)
+### The big bug
+
+Not the right number (nJxAgzeSAI0&t=877s)
 
 _The number you have called is being checked for trouble._
 
@@ -90,24 +126,6 @@ as a sort of sanity check on the whole invariant mass thing. For the physics
 people, you might want to know that I've also included the final
 mass histogram, Monte Carlo events, analysis of Higgs in the mass
 regime, etc. in the notebook.
-
-# My-History-And-Sources
-
-The first one I'll do here is from my academic background - MS Physics at the University of California at Riverside with research at the **R**eletavistic **H**eavy **I**on **C**ollider - [RHIC](https://www.bnl.gov/rhic/) ([archived](https://web.archive.org/web/20230303001906/https://www.bnl.gov/rhic/)), specifically at a **P**ioneering **H**igh **E**nergy **N**uclear **I**nteraction e**X**periment - [PHENIX](https://www.phenix.bnl.gov/) ([archived](https://web.archive.org/web/20230305034745/https://www.phenix.bnl.gov/)). I was able to be part of the research and discussion - much more discussion than research - concerning the discovery of the Higgs Boson, which happened at [CERN](https://www.home.cern/)'s ([archived](https://web.archive.org/web/20230305014745/https://www.home.cern/)) LHC - in France and Switzerland.
-
-I'm following a [guide](https://opendata-education.github.io/en_Workshops/exercises/discussion.html) ([archived](https://web.archive.org/web/20230305034951/https://opendata-education.github.io/en_Workshops/exercises/discussion.html)) from the [Helsinki Institute of Physics](https://www.hip.fi/) ([archived](https://web.archive.org/web/20230305040722/https://www.hip.fi/)). The data comes from the **C**ompact **M**uon **S**olenoid - [CMS](https://home.cern/science/experiments/cms) ([archived](https://web.archive.org/web/20230305041155/https://home.cern/science/experiments/cms)) - experiment, which lives way under the ground of France on the **L**arge **H**adron **C**ollider - [https://www.hasthelargehadroncolliderdestroyedtheworldyet.com/](https://www.hasthelargehadroncolliderdestroyedtheworldyet.com/) ([archived](https://web.archive.org/web/20230216163611/https://hasthelargehadroncolliderdestroyedtheworldyet.com/)), oops, the official link is for the [LHC](https://www.home.cern/science/accelerators/large-hadron-collider) ([archived](https://web.archive.org/web/20230305041346/https://www.home.cern/science/accelerators/large-hadron-collider)), though I believe that the code from the former site is legit. Check it out.
-
-```javascript
-<script type="text/javascript">
-if (!(typeof worldHasEnded == "undefined")) {
-document.write("YUP.");
-} else {
-document.write("NOPE.");
-}
-</script>
-```
-
-Anyway, I'll use the data from CMS to visualize something analagous to discovery of the Higgs through the 4-lepton channel. Look at the pictures - they'll be cool. 
 
 
 # For the future
