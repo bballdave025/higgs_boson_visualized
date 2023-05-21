@@ -7,7 +7,6 @@ happens. If it's nothing, look at the Jupyter Notebook in the repo.
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/bballdave025/higgs_boson_visualized/main?labpath=Higgs_Boson_Discovery_Visualization.ipynb)
 
-
 # Brief Description
 
 This is my progress on what's now my favorite visualization. I've been
