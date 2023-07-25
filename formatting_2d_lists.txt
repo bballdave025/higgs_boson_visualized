@@ -1,0 +1,221 @@
+import string
+
+def print_2d_list_columns_aligned(list_2d_to_print,
+                                  joining_delimiter = ",  ",
+                                  #output_as_str_not_list = False,
+                                  do_see_the_guts=False,
+                                  do_use_example=False):
+    if do_use_example:
+        list_2d_to_print = [
+   ["Ah!",  "We do have some Camembert", 
+                     1533244593020204045868120404042273, "jungle"],
+   ["It's a bit", "runny", "sir", "black"],
+   ["Well,",  "as a matter of fact it's", "very runny, sir", 3e24],
+   ["I think it's runnier",  "than you",  "like it, sir", "no"]
+]
+    ##endof:  if do_see_the_guts
+    
+    ## Make all elements strings - so we can use len()
+    list_2d_all_strings = \
+      [[str(item) for item in row] for row in list_2d_to_print]
+    
+    if do_see_the_guts:
+        print()
+        print("  list_2d_all_strings:")
+        print(list_2d_all_strings)
+        print()
+    ##endof:  if do_see_the_guts
+    
+    #  We want to find the max string length for each column
+    #+ We can basically transpose the 2d_list to get the
+    #+ content of each column
+    list_of_column_elems_as_tuples = \
+                 [column for column in zip(*list_2d_all_strings)]
+    
+    if do_see_the_guts:
+        print()
+        print("  list_of_column_elems_as_tuples:")
+        print(list_of_column_elems_as_tuples)
+        print()
+    ##endof:  if do_see_the_guts
+    
+    ## find the max string length for each tuple (each column)
+    list_of_max_str_len_by_column = \
+      [max([len(strng) for strng in tpl]) 
+        for tpl in list_of_column_elems_as_tuples]
+    # -v- gives array with elements being each longest string
+    #[max([strng for strng in tpl], key=len) for tpl in list_of_column_elems_as_tuples]
+    # -v- 2d array with strings
+    #[[strng for strng in tpl] for tpl in list_of_column_elems_as_tuples]
+    
+    if do_see_the_guts:
+        print()
+        print("  list_of_max_str_len_by_column:")
+        print(list_of_max_str_len_by_column)
+        print()
+    ##endof:  if do_see_the_guts
+    
+    # Create a formatter for each row
+    fmt_str = \
+      joining_delimiter.join('{{:{}}}'.format(max_len) 
+                               for max_len in list_of_max_str_len_by_column)
+    fmt_str = "[" + fmt_str + "]"
+    
+    if do_see_the_guts:
+        print()
+        print("  fmt_str:")
+        print(fmt_str)
+        print()
+    ##endof:  if do_see_the_guts
+    
+    # Get a string for each row, formatted correctly
+    list_of_formatted_row_strings = \
+      [fmt_str.format(*row) for row in list_2d_all_strings]
+    
+    if do_see_the_guts:
+        print()
+        print("  list_of_formatted_row_strings:")
+        print(list_of_formatted_row_strings)
+        print()
+    ##endof:  if do_see_the_guts
+    
+##endof:  print_2d_list_colunns_aligned(<params>)
+
+print_2d_list_columns_aligned(matrix, do_see_the_guts=True)
+
+#print(table_version_both)
+
+#mx = max((len(str(ele)) for sub in myArray for ele in sub))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+################################################################
+################################################################
+# Now so close!
+################################################################
+################################################################
+import string
+from io import StringIO
+import re
+
+def print_2d_list_columns_aligned(list_2d_to_print,
+                                  joining_delimiter = "  ",
+                                  output_as_str_not_list = False,
+                                  do_see_the_guts=False,
+                                  do_use_example=False):
+    if do_use_example:
+        list_2d_to_print = [
+   ["Ah!",  "We do have some Camembert", 
+                     1533244593020204045868120404042273, "jungle"],
+   ["It's a bit", "runny", "sir", "black"],
+   ["Well,",  "as a matter of fact it's", "very runny, sir", 3e24],
+   ["I think it's runnier",  "than you",  "like it, sir", "no"]
+]
+    ##endof:  if do_see_the_guts
+    
+    ## Make all elements strings - so we can use len()
+    list_2d_all_strings = \
+      [[str(item) for item in row] for row in list_2d_to_print]
+    
+    if do_see_the_guts:
+        print()
+        print("  list_2d_all_strings:")
+        print(list_2d_all_strings)
+        print()
+    ##endof:  if do_see_the_guts
+    
+    #  We want to find the max string length for each column
+    #+ We can basically transpose the 2d_list to get the
+    #+ content of each column
+    list_of_column_elems_as_tuples = \
+                 [column for column in zip(*list_2d_all_strings)]
+    
+    if do_see_the_guts:
+        print()
+        print("  list_of_column_elems_as_tuples:")
+        print(list_of_column_elems_as_tuples)
+        print()
+    ##endof:  if do_see_the_guts
+    
+    ## find the max string length for each tuple (each column)
+    list_of_max_str_len_by_column = \
+      [max([len(strng) for strng in tpl]) 
+        for tpl in list_of_column_elems_as_tuples]
+    # -v- gives array with elements being each longest string
+    #[max([strng for strng in tpl], key=len) for tpl in list_of_column_elems_as_tuples]
+    # -v- 2d array with strings
+    #[[strng for strng in tpl] for tpl in list_of_column_elems_as_tuples]
+    
+    if do_see_the_guts:
+        print()
+        print("  list_of_max_str_len_by_column:")
+        print(list_of_max_str_len_by_column)
+        print()
+    ##endof:  if do_see_the_guts
+    
+    # Create a formatter for each row
+    if not output_as_str_not_list:
+        joining_delimiter = "," + joining_delimiter
+    
+    fmt_str = \
+      joining_delimiter.join('{{:{}}}'.format(max_len) 
+                               for max_len in list_of_max_str_len_by_column)
+    if not output_as_str_not_list:
+        fmt_str = "[" + fmt_str + "],"
+    ##endof:  if output_as_str_not_list
+    
+    if do_see_the_guts:
+        print()
+        print("  fmt_str:")
+        print(fmt_str)
+        print()
+    ##endof:  if do_see_the_guts
+    
+    # Get a string for each row, formatted correctly
+    list_of_formatted_row_strings = \
+      [fmt_str.format(*row) for row in list_2d_all_strings]
+    
+    if do_see_the_guts:
+        print()
+        print("  list_of_formatted_row_strings:")
+        print(list_of_formatted_row_strings)
+        print()
+    ##endof:  if do_see_the_guts
+    
+    if output_as_str_not_list:
+        aligned_table_to_return = '\n'.join(list_of_formatted_row_strings)
+        
+        print(aligned_table_to_return)
+        return aligned_table_to_return
+    ##endof:  if output_as_str_not_list
+    
+    s = StringIO()
+    print(*list_of_formatted_row_strings, file=s)
+    output_table_raw = s.getvalue()
+    
+    output_table_raw = re.sub(r"^\[", r"[[", output_table_raw)
+    output_table_raw = re.sub(r"\],$", r"]]", output_table_raw)
+    
+    aligned_table_to_return = output_table_raw.replace(r"], [", "],\n [ ")
+    
+    print(aligned_table_to_return)
+    return aligned_table_to_return
+    
+##endof:  print_2d_list_colunns_aligned(<params>)
+
+print_2d_list_columns_aligned(matrix, do_see_the_guts=True)
+
+#print(table_version_both)
+
+#mx = max((len(str(ele)) for sub in myArray for ele in sub))
